@@ -1,14 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+// Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual
+// ou menor
+// que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor
+// negativo.
+//O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor e exibir o resultado
+// ao usuário.
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+fun main() {
+    println("digite um numero: ")
+    var num1 = readLine()!!.toInt()
+
+    println("Digite um numero: ")
+    var num2 = readLine()!!.toInt()
+
+    while  (true) {
+        println("digite novamente o segundo valor: ")
+        var num2 = readLine()!!.toDouble()
+
+    if (num2 > 0){
+        var calculo= num1 / num2
+        println(calculo)
+        break
     }
-}
+    else { println("tente novamente")}
+}}

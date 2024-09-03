@@ -1,26 +1,21 @@
-// Faça um programa que leia 6 valores informados pelo usuário,
-// calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
+//Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados
+// pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.
 
 fun main(){
-    println("Digite um numero: ")
+    var soma= 0
+    var contador = 0
+
+    println("digite um numero: ")
     var num1 = readLine()!!.toInt()
+
 
     println("Digite um numero: ")
     var num2 = readLine()!!.toInt()
 
-    println("Digite um numero: ")
-    var num3 = readLine()!!.toInt()
-
-    println("Digite um numero: ")
-    var num4 = readLine()!!.toInt()
-
-    println("Digite um numero: ")
-    var num5 = readLine()!!.toInt()
-
-    println("Digite um numero: ")
-    var num6 = readLine()!!.toInt()
-
-   var soma= (num1+ num2 +num3+ num4+ num5+ num6) /6
-    println("o resultado é , $soma")
-
+    for(i in num1 .. num2){
+        soma += i
+        contador++
+    }
+    val media = soma.toDouble() / contador
+    println("media = $media")
 }

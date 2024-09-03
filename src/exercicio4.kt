@@ -1,31 +1,24 @@
-/* Faça um programa que leia 3 valores informados
-pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
-
- */
+//Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100
+// (inclusive)Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e
+// 100 (inclusive)
 
 fun main() {
-    val list = mutableListOf<Int>()
+    // Definindo os limites
+    val inicio = 15
+    val fim = 100
 
-    // Lê 3 valores informados pelo usuário
-    for (i in 1..3) {
-        println("Digite o valor $i:")
-        list.add(readln().toInt())
+    // Calculando a soma e a contagem dos números
+    var soma = 0
+    var contador = 0
+
+    for (numero in inicio..fim) {
+        soma += numero
+        contador++
     }
 
-    // Ordena a lista em ordem decrescente
-    list.sortDescending()
+    // Calculando a média
+    val media = soma.toDouble() / contador
 
-    // Soma os dois maiores valores
-    val somaDosDoisMaiores = list[0] + list[1]
-
-    // Exibe a soma dos dois maiores valores
-    println("A soma dos dois maiores valores é: $somaDosDoisMaiores")
+    // Exibindo o resultado
+    println("A média aritmética dos números entre $inicio e $fim é: $media")
 }
-
-
-
-
-
-
-
-
